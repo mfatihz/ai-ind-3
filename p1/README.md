@@ -11,6 +11,7 @@ This gender classification experiment was conducted using 3 architectures:
 1. VGG (VGG19)
 2. GoogLeNet (inception V1)
 3. ResNet (ResNet50)
+
 For each architectural design, transfer learning, fine-tuning, and hyperparameter tuning were performed to achieve the targeted accuracy level (>90%).
 For transfer learning, all pre-trained weights data comes from the Pytorch library.
 
