@@ -17,6 +17,7 @@ For transfer learning, all pre-trained weights data comes from the Pytorch libra
 
 ## Result
 From the experiments conducted, it was found that the three architectures above can exceed the target accuracy value (>90%), with the Resnet obtaining the highest result among the three architectures used.
+
 Considering the accuracy achieved, training time, and hardware requirements, our group recommends using the ResNet architecture.
 
 ## Improvements
