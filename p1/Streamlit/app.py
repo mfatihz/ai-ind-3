@@ -5,7 +5,7 @@ import time
 
 st.title("Gender Prediction")
 
-fup = st.file_uploader("Upload a face image", type = "jpg")
+fup = st.file_uploader("Upload a face image", type = "jpg", accept_multiple_files=False)
 
 col1, col2 = st.columns([3, 1])
 
