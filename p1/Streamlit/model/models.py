@@ -31,6 +31,6 @@ def get_model():
     num_in_ftrs = model.fc.in_features
     model.fc = torch.nn.Linear(num_in_ftrs, 2) # 2 classes output
 
-    model.load_state_dict(torch.load('model/p1_resnet_best_point.pth', map_location=torch.device('cpu'))['model'])
+    model.load_state_dict(torch.load('/model/p1_resnet_best_point.pth', map_location=torch.device('cpu'))['model'])
     
     return model
