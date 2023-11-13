@@ -1,3 +1,4 @@
+import streamlit as st
 from PIL import Image
 from torchvision import models, transforms
 import torch
@@ -26,6 +27,7 @@ def predict(image):
         classes = target_labels[index]
         return classes
 
+@st.cache_resource
 def get_model():
     model = models.resnet50() # model = models.resnet50(weights=ResNet50_Weights.DEFAULT)
     num_in_ftrs = model.fc.in_features
