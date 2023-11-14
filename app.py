@@ -1,6 +1,6 @@
 from PIL import Image
 import streamlit as st
-from p1.Streamlit.models import predict
+from models import predict
 import time
 
 st.title("Gender Prediction")
