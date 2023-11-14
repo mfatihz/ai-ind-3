@@ -33,7 +33,7 @@ def get_model():
     num_in_ftrs = model.fc.in_features
     model.fc = torch.nn.Linear(num_in_ftrs, 2) # 2 classes output
     
-    weights = torch.load('p1_resnet_best_point.pth', map_location=torch.device('cpu'))['model']
+    weights = torch.load('p1/Streamlit/p1_resnet_best_point.pth', map_location=torch.device('cpu'))['model']
 
     if weights is not None:
         model.load_state_dict(weights)
