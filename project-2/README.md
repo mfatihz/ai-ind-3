@@ -21,16 +21,16 @@ Data pengujian
 Keterangan: Selain kedua model tersebut, dicoba juga untuk menggunakan yolov3 (https://github.com/AlexeyAB/darknet) dengan menggunakan nilai parameter yang direkomendasikan. Akan tetapi perkiraan total waktu training-nya adalah 10 jam sehingga proses trainingnya dibatalkan.
 
 Hasil pengujian
-Model: yolov8n
-- waktu training: 50 epochs, 1.345 hours
-- nilai validasi mAP50: 0.673
-- nilai validasi mAP50-95: 0.436
-- inference time (3 gambar): 168.2ms, 24.8ms, 34.9ms (rataan: 75.97ms)
-Model: yolov8m
-- waktu training: 50 epochs, 1.618 hours
-- nilai validasi mAP50: 0.729
-- nilai validasi mAP50-95: 0.482
-- inference time (3 gambar): 141.4ms, 67.0ms, 28.4ms (rataan: 80.13ms)
+- Model: yolov8n
+  - waktu training: 50 epochs, 1.345 hours
+  - nilai validasi mAP50: 0.673
+  - nilai validasi mAP50-95: 0.436
+  - inference time (3 gambar): 168.2ms, 24.8ms, 34.9ms (rataan: 75.97ms)
+- Model: yolov8m
+  - waktu training: 50 epochs, 1.618 hours
+  - nilai validasi mAP50: 0.729
+  - nilai validasi mAP50-95: 0.482
+  - inference time (3 gambar): 141.4ms, 67.0ms, 28.4ms (rataan: 80.13ms)
 
 Penutup
 - Karena keterbatasan waktu dan hardware, pengujian baru bisa dilakukan untuk 2 model (yolov8n dan yolov8m) dan belum ada perbandingan penggunaan nilai Hyperparameter. 
