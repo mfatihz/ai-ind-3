@@ -1,3 +1,5 @@
+# Project CV 2: Person Tracking
+
 Dataset
 - Data 'person' diunduh dari fiftyone, sebanyak 3000 data untuk training dan 500 data testing
 - Untuk mempermudah pengaturan data, lokasi download data fiftyone (/root/fiftyone) pada Google Colaboratory diubah, menyesuaikan dengan lokasi default dari YOLOv8 (/content/datasets)
@@ -37,5 +39,5 @@ Penutup
 - Dari hasil pengujian diperoleh lama waktu training untuk yolov8m lebih panjang dibandingkan yolov8n. Hal ini disebabkan jumlah parameter yolov8m yang lebih banyak dibandingkan yolov8n.
 - Dari hasil pengujian, nilai uji validasi yolov8m lebih baik dibandingkan yolov8n karena yolov8m memiliki lebih banyak feature.
 - Dari hasil pengujian, inference time yolov8n lebih cepat dibandingkan yolov8m karena parameter yang digunakan dalam perhitungan lebih sedikit.
-- Pad saat melakukan prediksi, dari pengujian tiga data gambar dapat ditunjukkan bahwa model sudah bisa mendeteksi dua data gambar dengan baik (gambar 2 dan gambar 3). Untuk gambar pertama, kedua model tidak bisa mendeteksi object person dengan lengkap.
+- Pada saat melakukan prediksi, dari pengujian tiga data gambar dapat ditunjukkan bahwa model sudah bisa mendeteksi dua data gambar dengan baik (gambar 2 dan gambar 3). Untuk gambar pertama, kedua model tidak bisa mendeteksi object dengan lengkap.
 - Dari grafik metrik uji dapat dilihat bahwa hasil training masih belum konvergen. Hal ini menunjukkan bahwa hasil pengujian masih bisa dioptimalkan lagi terutama dengan menambah nilai epoch.
