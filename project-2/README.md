@@ -9,8 +9,8 @@ Struktur Direktori Data
 - Proses pengaturan folder ini dilakukan dengan linux command untuk mengurangi proses manual dan human-error.
 - Untuk project kali ini, folder images diisi dengan data gambar COCO (dalam format jpg) sedangkan folder labels berisi file txt. Masing-masing gambar tersebut memiliki pasangan file txt-nya sendiri.
 
-Labels
-- Dilakukan perubahan format data bounding box COCO (xl, yt, w, h) ke dalam format YOLO (xc, yc, w, h)
+Annotations dan Labels
+- Dilakukan perubahan format data bounding box COCO (xl, yt, w, h) ke dalam format YOLO (xc/wimg, yc/himg, w/wimg, h/himg)
 - Untuk setiap data training dan testing, fiftyone menyediakan data label gambar dengan format json yang isinya gabungan dari keseluruhan datanya. Agar memenuhi persyaratan untuk training pada yolo, data json tersebut diproses agar menghasilkan data labels, yang mana untuk masing-masing data gambar akan memiliki satu data label yang bersesuaian. Label yang dihasilkan, seperti yang telah dijelaskan di atas, diletakkan dalam folder 'labels/train' dan 'labels/val'
 - Dilakukan penyesuaian index classes (dalam hal ini index person = 1 pada data fiftyone diubah menjadi 0)
 
