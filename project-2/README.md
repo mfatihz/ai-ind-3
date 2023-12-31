@@ -21,8 +21,6 @@ Data pengujian
 - Model: yolov8n dan yolov8m (https://github.com/ultralytics/ultralytics)
 - Epoch: 50
 
-Keterangan: Selain kedua model tersebut, dicoba juga untuk menggunakan yolov3 (https://github.com/AlexeyAB/darknet). Setelah dijalankan, dengan menggunakan nilai parameter yang direkomendasikan, perkiraan total waktu training-nya adalah 10 jam. Oleh karena itu proses trainingnya dibatalkan.
-
 Hasil pengujian
 - Model: yolov8n
   - waktu training: 50 epochs, 1.345 hours
