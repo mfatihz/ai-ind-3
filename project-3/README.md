@@ -3,6 +3,7 @@
 ## Tujuan
 Tujuan yang hendak dicapai dalam percobaan ini adalah melakukan segmentasi visual terhadap objek-objek yang sering ditemui ketika berkendara di sepanjang jalan raya.
 
+
 ## Percobaan 
 ### Dataset
 Dataset mempergunakan data yang sudah disediakan dalam dashboard project. Dataset terdiri dari 12 kelas object yang sering ditemui di sepanjang jalan:
@@ -11,10 +12,12 @@ Dataset mempergunakan data yang sudah disediakan dalam dashboard project. Datase
 
 Data terdiri dari 367 data training dan 101 data testing. Data training kemudian dibagi dengan proporsi 80/20 untuk testing dan validation. Sebagai tambahan, pada dataset training terdapat beberapa data duplikasi yang perlu difilter agar tidak disertakan dalam proses training. Proses memfilter data ini dilakukan secara otomatis dalam class 'Dataset' pytorch.
 
+
 ### Model
 Model yang dipakai dalam proses segmentasi adalah UNet dengan mempergunakan libary `https://github.com/qubvel/segmentation_models.pytorch`.
 
 Library tersebut dipilih karena menyediakan berbagai variasi encoder dan pre-trained weight. Selain itu library ini juga sudah banyak dipakai untuk berbasai kasus segmentasi lainnya dengan hasil yang sangat memuaskan.
+
 
 ### Hyperparameter
 Percobaan dilakukan dengan mengkombinasikan berbagai nilai hyperparameter, yang secara sederhana, dapat dibagi menjadi dua tahap. Di tahap awal dipergunakan berbagai kombinasi hyperparameter dengan beban komputasi yang tidak terlalu tinggi. Berikutnya dilanjutkan dengan penggunaan hyperparameter yang lebih besar beban komputasinya (misalnya, dengan memperbesar epoch atau mempergunakan encoder yang memiliki jumlah parameter yang lebih banyak).
@@ -27,6 +30,7 @@ Activation | softmax 2d
 Learning Rate | 1e-4 (for 0-24 epoch), 1e-5 (for 25-49 epoch), 5e-6 (for 50-74 epoch), 1e-6 (for next epochs)
 Metrics | DiceLoss, IoU(threshold=0.5), Accuracy
 Optimizers | Adam
+
 
 ### Hasil Percobaan
 classes | encoder | pretrained | epoch | augmention | dice_loss | iou_score | accuracy | training time
@@ -47,10 +51,8 @@ classes | encoder | pretrained | epoch | augmention | dice_loss | iou_score | ac
 
 3 classes: car, pedestrian, bicyclist
 
-231229_1512__p3_12_unet_qubvel_resnet101_imagenet_50_6fps_short.mp4
 
-![](231229_1512__p3_12_unet_qubvel_resnet101_imagenet_50_6fps_short.mp4)
-
+https://github.com/mfatihz/ai-ind-3/assets/10268517/7ba042df-04c1-4a01-b5fe-91e0347c8ad9
 
 
 ## Pembahasan
@@ -58,10 +60,12 @@ classes | encoder | pretrained | epoch | augmention | dice_loss | iou_score | ac
 - Segmentasi bisa dilakukan dengan baik pada objek-objek berukuran besar tapi belum bisa mengenali objek-objek dengan ukuran kecil.
 - Penggunaan hyperparameter tidak dapat meningkatkan hasil segmentasi pada objek-objek kecil.
 
+
 ## Kesimpulan
 - Kelas-kelas untuk segmentasi memiliki luas area (= jumlah pixel) yang sangat bervariasi dan merupakan kondisi imbalance classes (objek berukuran kecil memiliki jumlah pixel yang relatif lebih sedikit dibandingkan dengan background-nya)
 - Jumlah data yang dipergunakan dalam training tidak terlalu banyak dan juga kurang bervariasi.
 - Akibat adanya kondisi-kondisi di atas, segmentasi cenderung hanya dilakukan pada object-object yang besar sedangkan object-object kecil menjadi tidak terdeteksi.
+
 
 ## Saran 
 - Jumlah dan variasi data untuk training diperbanyak
