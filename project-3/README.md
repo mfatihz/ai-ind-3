@@ -47,8 +47,7 @@ classes | encoder | pretrained | epoch | augmention | dice_loss | iou_score | ac
 
 3 classes: car, pedestrian, bicyclist
 
-![Demo](231229_1512__p3_12_unet_qubvel_resnet101_imagenet_50_6fps_short.mp4)
-![Demo](231229_1512__p3_12_unet_qubvel_resnet101_imagenet_50_6fps_short.gif)
+![Demo](231229_1512__p3_12_unet_qubvel_resnet101_imagenet_50_6fps_short.mp4 "Video demo")
 
 ## Pembahasan
 - Dari plot metric diperoleh hasil bahwa di atas epoch 30 nilai metric sudah tidak banyak berubah (dice loss, IoU score, accuracy).
