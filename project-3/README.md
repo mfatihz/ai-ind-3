@@ -1,26 +1,35 @@
-# Project 3: Self Driving Car
+# Project 3: Self-Driving Car
+
+
+## Latar Belakang
+Self-driving car merupakan kendaraan yang dapat berjalan tanpa perlu input manusia. Mereka mengkombinasikan sensor dan software untuk mengendalikan, menavigasi, dan menjalankan kendaraan.
+
+Salah satu persyaratan mendasar yang harus dimiliki oleh self-driving car adalah kemampuan dalam mengenali objek-objek sekitar, misalnya, jalan, pagar, gedung, orang/pejalan kaki. Kemampuan ini bisa dicapai, salah satu caranya, dengan mempergunakan sensor visual (kamera) sebagai input dan kemudian mengolah hasil inputan tersebut dalam algoritma machine learning untuk mengenali objek dalam inputan.
+
 
 ## Tujuan
-Tujuan yang hendak dicapai dalam percobaan ini adalah melakukan segmentasi visual terhadap objek-objek yang sering ditemui ketika berkendara di sepanjang jalan raya.
+Tujuan yang hendak dicapai dalam percobaan ini adalah melakukan segmentasi visual (membagi gambar berdasarkan jenis kelasnya) terhadap objek-objek yang sering ditemui ketika berkendara di sepanjang jalan raya.
 
 
 ## Percobaan 
 ### Dataset
 Dataset mempergunakan data yang sudah disediakan dalam dashboard project. Dataset terdiri dari 12 kelas object yang sering ditemui di sepanjang jalan:
 
-`sky, building, pole, road, pavement, tree, signsymbol, fence, car, pedestrian, bicyclist, unlabeled`.
+`sky`, `building`, `pole`, `road`, `pavement`, `tree`, `signsymbol`, `fence`, `car`, `pedestrian`, `bicyclist`, `unlabeled`.
 
-Data terdiri dari 367 data training dan 101 data testing. Data training kemudian dibagi dengan proporsi 80/20 untuk testing dan validation. Sebagai tambahan, pada dataset training terdapat beberapa data duplikasi yang perlu difilter agar tidak disertakan dalam proses training. Proses memfilter data ini dilakukan secara otomatis dalam class 'Dataset' pytorch.
+Data terdiri dari 367 data training dan 101 data testing. Data training kemudian dibagi dengan proporsi 80/20 untuk testing dan validation. Sebagai tambahan, pada dataset training terdapat beberapa data duplikasi yang perlu difilter agar tidak disertakan dalam proses training. Proses memfilter data ini dilakukan secara otomatis dalam class `Dataset` pytorch.
+
+Data yang dipakai dalam percobaan ini dapat dilihat dalam folder `datasets`.
 
 
 ### Model
 Model yang dipakai dalam proses segmentasi adalah UNet dengan mempergunakan libary `https://github.com/qubvel/segmentation_models.pytorch`.
 
-Library tersebut dipilih karena menyediakan berbagai variasi encoder dan pre-trained weight. Selain itu library ini juga sudah banyak dipakai untuk berbasai kasus segmentasi lainnya dengan hasil yang sangat memuaskan.
+Library tersebut dipilih karena menyediakan berbagai variasi encoder dan pre-trained weight.
 
 
 ### Hyperparameter
-Percobaan dilakukan dengan mengkombinasikan berbagai nilai hyperparameter, yang secara sederhana, dapat dibagi menjadi dua tahap. Di tahap awal dipergunakan berbagai kombinasi hyperparameter dengan beban komputasi yang tidak terlalu tinggi. Berikutnya dilanjutkan dengan penggunaan hyperparameter yang lebih besar beban komputasinya (misalnya, dengan memperbesar epoch atau mempergunakan encoder yang memiliki jumlah parameter yang lebih banyak).
+Percobaan dilakukan dengan mengkombinasikan berbagai nilai hyperparameter, yang secara sederhana, dapat dibagi menjadi dua tahap. Di tahap awal mempergunakan berbagai kombinasi hyperparameter dengan beban komputasi yang tidak terlalu tinggi. Tahap berikutnya dilanjutkan dengan mempergunakan hyperparameter yang lebih besar beban komputasinya (misalnya, dengan memperbesar epoch atau mempergunakan encoder yang memiliki jumlah parameter yang lebih banyak).
 
 Hyperparameter | Setting
 --- | ---
@@ -56,16 +65,16 @@ https://github.com/mfatihz/ai-ind-3/assets/10268517/7ba042df-04c1-4a01-b5fe-91e0
 
 
 ## Pembahasan
-- Dari plot metric diperoleh hasil bahwa di atas epoch 30 nilai metric sudah tidak banyak berubah (dice loss, IoU score, accuracy).
+- Dari plot metric diperoleh hasil bahwa nilai epoch di atas 30 hasil metric sudah tidak banyak berubah (dice loss, IoU score, accuracy).
 - Segmentasi bisa dilakukan dengan baik pada objek-objek berukuran besar tapi belum bisa mengenali objek-objek dengan ukuran kecil.
-- Penggunaan hyperparameter tidak dapat meningkatkan hasil segmentasi pada objek-objek kecil.
+- Perubahan hyperparameter tetap belum dapat meningkatkan hasil segmentasi pada objek-objek kecil.
 
 
 ## Kesimpulan
-- Kelas-kelas untuk segmentasi memiliki luas area (= jumlah pixel) yang sangat bervariasi dan merupakan kondisi imbalance classes (objek berukuran kecil memiliki jumlah pixel yang relatif lebih sedikit dibandingkan dengan background-nya)
-- Jumlah data yang dipergunakan dalam training tidak terlalu banyak dan juga kurang bervariasi.
-- Akibat adanya kondisi-kondisi di atas, segmentasi cenderung hanya dilakukan pada object-object yang besar sedangkan object-object kecil menjadi tidak terdeteksi.
+- Kelas-kelas untuk segmentasi memiliki luas area yang sangat bervariasi dan merupakan kondisi 'imbalance classes' (objek berukuran kecil memiliki jumlah pixel yang relatif lebih sedikit dibandingkan dengan objek-objek di sekitarnya)
+- Jumlah data yang dipergunakan dalam training kurang banyak dan juga kurang bervariasi.
+- Akibat adanya kondisi-kondisi di atas, segmentasi cenderung hanya akurat pada object-object yang besar dan tidak dapat mendeteksi object-object kecil.
 
 
 ## Saran 
-- Jumlah dan variasi data untuk training diperbanyak
+- Jumlah dan variasi data untuk training diperbanyak.
