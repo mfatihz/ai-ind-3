@@ -57,8 +57,8 @@ classes | encoder | pretrained | epoch | augmention | dice_loss | iou_score | ac
 12 | resnet101 | yes | 50 | no | 0.1941 | 0.7617 | 0.9792 | 45.67 min
 12 | resnet101 | yes | 50 | yes | 0.1869 | 0.7299 | 0.9749 | 48.64 min
 12 | resnet101 | yes | 200 | yes | 0.1154 | 0.8121 | 0.9828 | 192.26 min
-
-3 classes: car, pedestrian, bicyclist
+> tidak didokumentasikan
+> 3 classes: car, pedestrian, bicyclist
 
 
 Simulasi hasil segmentasi untuk mask `road` bisa dilihat secara lengkap dalam folder `videos`
@@ -73,7 +73,7 @@ https://github.com/mfatihz/ai-ind-3/assets/10268517/7ba042df-04c1-4a01-b5fe-91e0
 
 
 ## Kesimpulan
-- Kelas-kelas untuk segmentasi memiliki luas area yang sangat bervariasi dan merupakan kondisi 'imbalance classes' (objek berukuran kecil memiliki jumlah pixel yang relatif lebih sedikit dibandingkan dengan objek-objek di sekitarnya)
+- Kelas-kelas untuk segmentasi memiliki luas area yang sangat bervariasi dan merupakan kondisi 'imbalance classes' (objek berukuran kecil memiliki jumlah pixel yang jauh lebih sedikit dibandingkan dengan objek-objek di sekitarnya).
 - Jumlah data yang dipergunakan dalam training kurang banyak dan juga kurang bervariasi.
 - Akibat adanya kondisi-kondisi di atas, segmentasi cenderung hanya akurat pada object-object yang besar dan tidak dapat mendeteksi object-object kecil.
 
