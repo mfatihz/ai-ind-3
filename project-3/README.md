@@ -61,6 +61,8 @@ classes | encoder | pretrained | epoch | augmention | dice_loss | iou_score | ac
 3 classes: car, pedestrian, bicyclist
 
 
+Simulasi hasil segmentasi untuk mask `road` bisa dilihat secara lengkap dalam folder `videos`
+
 https://github.com/mfatihz/ai-ind-3/assets/10268517/7ba042df-04c1-4a01-b5fe-91e0347c8ad9
 
 
