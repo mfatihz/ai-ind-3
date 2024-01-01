@@ -57,7 +57,8 @@ classes | encoder | pretrained | epoch | augmention | dice_loss | iou_score | ac
 12 | resnet101 | yes | 50 | no | 0.1941 | 0.7617 | 0.9792 | 45.67 min
 12 | resnet101 | yes | 50 | yes | 0.1869 | 0.7299 | 0.9749 | 48.64 min
 12 | resnet101 | yes | 200 | yes | 0.1154 | 0.8121 | 0.9828 | 192.26 min
-> tidak didokumentasikan
+> * tidak didokumentasikan
+
 > 3 classes: car, pedestrian, bicyclist
 
 
