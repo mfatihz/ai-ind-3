@@ -4,22 +4,22 @@
 
 The goal of this project is to find ways to help farmers detect plant diseases quickly and easily. The detection method used here is the classification of disease types through deep learning techniques.
 
-## Pendahuluan
-### Latar belakang
+## Introduction
+### Background
 
 The agricultural sector is currently grappling with challenges like climate change, pest infestations, and environmental stressors, necessitating innovative solutions for ensuring food security and sustainable crop production, especially for the upcoming challenges associated with quality food.
 
 With the lack of agricultural experts and the vast geographical area of Indonesia, it is necessary to create an innovation that can help overcome the problems faced by farmers without the need to wait for assistance from experts. The innovation presented should be easy to operate and can be run anywhere.
 
-### Tujuan
+### Objective
 
 Build a deep learning model that can identify the type of disease in plants using a dataset that can describe the original conditions of plants in agricultural land.
 
-### Batasan
+### Scope
 
 Exploring the accuracy of resnet50 and VGG19 models on existing datasets.
 
-## Percobaan
+## Experiment
 
 ### 1. Data Collection & Preparation
 
