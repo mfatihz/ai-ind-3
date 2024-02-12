@@ -23,7 +23,7 @@ Data yang dipakai dalam percobaan ini dapat dilihat dalam folder `datasets`.
 
 
 ### Model
-Model yang dipakai dalam proses segmentasi adalah UNet dengan mempergunakan libary `https://github.com/qubvel/segmentation_models.pytorch`.
+Model yang dipakai dalam proses segmentasi adalah UNet dengan mempergunakan libary [qubvel-segmentation-models]((https://github.com/qubvel/segmentation_models.pytorch).
 
 Library tersebut dipilih karena menyediakan berbagai variasi encoder dan pre-trained weight.
 
