@@ -46,7 +46,7 @@ Learning rate = 0.01, 0.001
 Optimizer: SGD (Momentum: 0.0, 0.5, 0.9), Adam
 Dropout: 0, 0.15
 
-The metrics used are cross entropy loss (with and without weighting to handle imbalanced data) and accuracy.
+The metrics used are cross entropy loss (with or without weighting to handle imbalanced data) and accuracy.
 
 The best training results for each model are summarized in the following table:
 
