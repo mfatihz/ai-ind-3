@@ -58,9 +58,9 @@ VGG | 50 | SGD | 0.001 | 0.9 | 0 | 0.829 | 72.10 | 1.273 | 64.15 | 59.32
 
 ## Deployment
 
-Model hasil training dapat diakses melalui [mfz-plant-disease](https://mfz-plant-disease.streamlit.app/)
+The training result model can be accessed through [mfz-plant-disease](https://mfz-plant-disease.streamlit.app/)
 
-Source code: [Github](https://github.com/mfatihz/streamlit-plant-disease)
+The source code can be seen in [Github](https://github.com/mfatihz/streamlit-plant-disease)
 
 ## Conclusions and Suggestions
 
