@@ -6,7 +6,7 @@ Dataset
 
 Struktur Direktori Data
 - Struktur folder data diubah agar sesuai dengan default dari YOLOv8: terdiri dari pasangan folder 'images' dan folder 'labels' dan masing-masing folder tersebut memiliki sub folder 'train' dan 'val'.
-- Proses pengaturan folder ini dilakukan dengan linux command untuk mengurangi proses manual dan human-error.
+- Proses pengaturan folder ini dilakukan dengan script untuk mengurangi proses manual dan menghindari human-error.
 - Untuk project kali ini, folder images diisi dengan data gambar COCO (dalam format jpg) sedangkan folder labels berisi file txt. Masing-masing gambar tersebut memiliki pasangan file txt-nya sendiri.
 
 Annotations dan Labels
