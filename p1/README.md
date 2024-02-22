@@ -22,3 +22,7 @@ Considering the accuracy achieved, training time, and hardware requirements, our
 
 ## Improvements
 Although the accuracy result has exceeded the target, the fine-tuning and hyperparameter tuning process performed in this experiment are still minimum. Therefore, to improve the prediction performance, further exploration can be done on both processes, especially on the data augmentation process.
+
+## Deployment
+Demo: [Streamlit](https://mfz-gender-prediction.streamlit.app/)
+Source code: [Github](https://github.com/mfatihz/streamlit-gender-prediction)
