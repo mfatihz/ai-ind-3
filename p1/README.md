@@ -25,4 +25,5 @@ Although the accuracy result has exceeded the target, the fine-tuning and hyperp
 
 ## Deployment
 Demo: [Streamlit](https://mfz-gender-prediction.streamlit.app/)
+
 Source code: [Github](https://github.com/mfatihz/streamlit-gender-prediction)
